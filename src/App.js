@@ -1,9 +1,10 @@
 import React from 'react'
-import './App.css'
 
-import Calculator from './Calculator'
+import { Calculator } from './components'
 
-function App() {
+import './App.scss'
+
+const App = () => {
   return (
     <div>
       <Calculator />
