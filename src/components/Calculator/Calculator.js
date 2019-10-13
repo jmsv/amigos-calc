@@ -44,7 +44,12 @@ export const Calculator = () => {
               max="1000000"
               step="1"
               value={donation}
-              onChange={event => setDonation(event.target.value)}
+              onChange={event => {
+                const { value } = event.target
+                if (value <= 10000000) {
+                  setDonation(value)
+                }
+              }}
             />
           </div>
 
@@ -63,10 +68,13 @@ export const Calculator = () => {
           const name = formatName(output, value)
 
           return (
-            <div key={name}>
-              {output.currency}
-              {value} {name}
-            </div>
+            <React.Fragment key={name}>
+              <div className="output-value">
+                {output.currency}
+                {value}
+              </div>
+              <div>{name}</div>
+            </React.Fragment>
           )
         })}
       </div>
