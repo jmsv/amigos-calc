@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 button {
-  background-color: $color-primary;
+  background-color: #aaa;
   color: white;
   display: block;
   min-width: 100px;
@@ -11,8 +11,18 @@ button {
   font-weight: 700;
   border: none;
   cursor: pointer;
+  
+  &.primary {
+    background-color: $color-primary;
+    &:hover {
+      background-color: #307aa0;
+    }
+  }
 
-  &:hover {
-    background-color: #307aa0;
+  &.secondary {
+    background-color: $color-secondary;
+    &:hover {
+      background-color: $color-secondary-dark;
+    }
   }
 }

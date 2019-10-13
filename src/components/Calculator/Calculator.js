@@ -53,8 +53,7 @@ export const Calculator = () => {
 
         <div className="cta">
           <a href={`https://www.amigos.org.uk/donate/fundraise/${donation}/credit-card`}>
-            {/* TODO: Yellow Donate button from Amigos site */}
-            <Button>Donate {donation}</Button>
+            <Button secondary>Donate {donation}</Button>
           </a>
         </div>
       </div>
