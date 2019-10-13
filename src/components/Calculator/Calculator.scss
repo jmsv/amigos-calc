@@ -5,44 +5,62 @@
   margin: auto;
   padding: 4rem 2rem;
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin: 0.5rem 0;
+  }
 
   .outputs {
+    background: white;
     border: 4px solid $color-primary;
     padding: 1rem 1.5rem;
-    margin-top: 1.5rem;
   }
 
   .cta {
+    margin-left: auto;
+    padding: 0;
+    padding-left: 1rem;
+    border-left: 4px solid #ddd;
+  }
+
+  .row {
+    float: none;
     display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-  }
-}
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
-.row {
-  float: none;
-  display: flex;
-  align-items: center;
+    .input-line {
+      display: flex;
+      white-space: nowrap;
 
-  &.center {
-    justify-content: center;
-  }
+      > div {
+        margin: 0 0.5rem;
+      }
 
-  div {
-    padding-right: 1.3rem;
-  }
+      .currency {
+        span {
+          font-size: 0.8em;
+          vertical-align: middle;
+          margin-right: 8px;
+        }
 
-  input {
-    border: 0;
-    height: auto;
-    background-color: white;
-    padding: 0.75em;
-    line-height: normal;
-    font-size: 1.2rem;
-    outline: 4px solid #eee;
+        input {
+          border: 0;
+          height: auto;
+          background-color: white;
+          padding: 0.75em;
+          line-height: normal;
+          font-size: 1.2rem;
+          outline: 4px solid #eee;
 
-    &:focus {
-      outline: 4px solid $color-primary;
+          &:focus {
+            outline: 4px solid $color-primary;
+          }
+        }
+      }
     }
   }
 }
