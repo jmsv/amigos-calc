@@ -58,7 +58,7 @@ export const Calculator = () => {
 
         <div className="cta">
           <a href={`https://www.amigos.org.uk/donate/fundraise/${donation}/credit-card`}>
-            <Button secondary>Donate {donation}</Button>
+            <Button secondary>Donate £{donation}</Button>
           </a>
         </div>
       </div>
