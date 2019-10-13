@@ -1,32 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import './Calculator.scss'
 import { Button } from '../Button/Button'
 
 export const Calculator = () => {
   const [donation, setDonation] = useState(10)
+  const [solarPanels, setSolarPanels] = useState(0)
+
+  useEffect(() => {
+    setSolarPanels(Math.floor(donation * 0.1))
+  }, [donation])
 
   // TODO: Handle plurals
   const outputs = [
-    { name: 'Solar lights', scale: 0.1, dp: 0 },
-    { name: 'People reached', scale: 0.7, dp: 0 },
-    { name: 'Saved by families', scale: 7.2, dp: 2, currency: '$' },
-    { name: 'Extra hours of child study time', scale: 105, dp: 0 },
+    { name: 'Solar lights', scale: 1, dp: 0 },
+    { name: 'People reached', scale: 7, dp: 0 },
+    { name: 'Saved by families', scale: 72, dp: 2, currency: '$' },
+    { name: 'Extra hours of child study time', scale: 1050, dp: 0 },
     {
       name: (
         <span>
           Tonnes of CO<sub>2</sub> emissions averted
         </span>
       ),
-      scale: 0.111,
+      scale: 1.11,
       dp: 2,
     },
   ]
 
-  // TODO: Scale relative to number of solar panels
   const applyScale = ({ scale, dp, currency }) => {
     const offset = Math.pow(10, dp)
-    const value = Math.floor(donation * scale * offset) / offset
+    const value = Math.floor(solarPanels * scale * offset) / offset
     return currency ? value.toFixed(dp) : value
   }
 
