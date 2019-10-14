@@ -11,7 +11,7 @@ export const Calculator = () => {
   const outputs = [
     { name: 'Solar $NOUN', noun: 'light', scale: 0.1, dp: 0 },
     { name: '$NOUN reached', noun: 'Person', scale: 0.7, dp: 0 },
-    { name: 'Saved by families', scale: 7.2, dp: 2, currency: '$' },
+    { name: 'Saved by families', scale: 7.2, dp: 2, currency: '£' },
     { name: 'Extra $NOUN of child study time', noun: 'hour', scale: 105, dp: 0 },
     { name: '$NOUN of CO2 emissions averted', noun: 'Tonne', scale: 0.111, dp: 2 },
   ]
