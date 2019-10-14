@@ -31,8 +31,8 @@ export const Calculator = () => {
   return (
     <div className="calculator">
       <div className="row">
-        <div className="input-line">
-          <div>A donation of</div>
+        <div className="input-line top-space">
+          <div className="nowrap">A donation of</div>
 
           <div className="currency">
             <span>£</span>
@@ -53,10 +53,10 @@ export const Calculator = () => {
             />
           </div>
 
-          <div>will result in:</div>
+          <div className="nowrap">will result in:</div>
         </div>
 
-        <div className="cta">
+        <div className="cta top-space">
           <a href={`https://www.amigos.org.uk/donate/fundraise/${donation}/credit-card`}>
             <Button secondary>Donate £{donation}</Button>
           </a>
