@@ -9,11 +9,11 @@ export const Calculator = () => {
 
   // TODO: Handle plurals
   const outputs = [
-    { name: 'Solar $NOUN', noun: 'light', scale: 0.1, dp: 0 },
-    { name: '$NOUN reached', noun: 'Person', scale: 0.7, dp: 0 },
+    { name: 'Solar @', noun: 'light', scale: 0.1, dp: 0 },
+    { name: '@ reached', noun: 'Person', scale: 0.7, dp: 0 },
     { name: 'Saved by families', scale: 7.2, dp: 2, currency: '£' },
-    { name: 'Extra $NOUN of child study time', noun: 'hour', scale: 105, dp: 0 },
-    { name: '$NOUN of CO2 emissions averted', noun: 'Tonne', scale: 0.111, dp: 2 },
+    { name: 'Extra @ of child study time', noun: 'hour', scale: 105, dp: 0 },
+    { name: '@ of CO2 emissions averted', noun: 'Tonne', scale: 0.111, dp: 2 },
   ]
 
   const applyScale = ({ scale, dp, currency }) => {
@@ -25,7 +25,7 @@ export const Calculator = () => {
   const formatName = ({ name, noun }, value) => {
     if (!noun) return name
 
-    return name.replace('$NOUN', pluralize(noun, value))
+    return name.replace('@', pluralize(noun, value))
   }
 
   return (
