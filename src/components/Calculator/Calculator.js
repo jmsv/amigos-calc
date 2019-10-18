@@ -57,8 +57,12 @@ export const Calculator = () => {
         </div>
 
         <div className="cta top-space">
-          <a href={`https://www.amigos.org.uk/donate/fundraise/${donation}/credit-card`}>
-            <Button secondary>Donate £{donation}</Button>
+          <a
+            href={`https://www.amigos.org.uk/donate/fundraise/${Number(donation) ||
+              10}/credit-card`}>
+            <Button secondary>
+              Donate {!isNaN(donation) && donation > 0 && '£' + Number(donation)}
+            </Button>
           </a>
         </div>
       </div>
