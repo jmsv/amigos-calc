@@ -5,7 +5,7 @@
   @while $i <= $iterations {
     @media all and (min-width: 60px * $i) {
       body {
-        font-size: 0.08em + 0.18em * $i;
+        font-size: 0.18em * $i;
       }
     }
     $i: $i + 1;
