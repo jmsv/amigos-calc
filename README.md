@@ -1,5 +1,7 @@
 # amigos-calc
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ada46458-ee60-443a-8040-25bd631a0fa7/deploy-status)](https://app.netlify.com/sites/amigos-calc/deploys)
+
 |                                 | working ref |      |
 |---------------------------------|:-----------:|-----:|
 | Number of solar lights          |             |    1 |
