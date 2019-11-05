@@ -5,7 +5,7 @@ import './Calculator.scss'
 import { Button } from '../Button/Button'
 
 export const Calculator = () => {
-  const [donation, setDonation] = useState(10)
+  const [donation, setDonation] = useState(35)
 
   // TODO: Handle plurals
   const outputs = [
@@ -55,16 +55,6 @@ export const Calculator = () => {
 
           <div className="nowrap">will result in:</div>
         </div>
-
-        <div className="cta top-space">
-          <a
-            href={`https://www.amigos.org.uk/donate/fundraise/${Number(donation) ||
-              10}/credit-card`}>
-            <Button secondary>
-              Donate {!isNaN(donation) && donation > 0 && '£' + Number(donation)}
-            </Button>
-          </a>
-        </div>
       </div>
       <div className="outputs">
         {outputs.map(output => {
@@ -81,6 +71,15 @@ export const Calculator = () => {
             </React.Fragment>
           )
         })}
+      </div>
+
+      <div className="cta top-space">
+        <a
+          href={`https://www.amigos.org.uk/donate/fundraise/${Number(donation) || 10}/credit-card`}>
+          <Button secondary>
+            Donate {!isNaN(donation) && donation > 0 && '£' + Number(donation)}
+          </Button>
+        </a>
       </div>
     </div>
   )
