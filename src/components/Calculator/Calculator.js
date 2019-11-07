@@ -73,7 +73,7 @@ export const Calculator = () => {
         })}
       </div>
 
-      <!-- <div className="cta top-space">
+      {/* <div className="cta top-space">
         <a
           target="_parent"
           href={`https://www.amigos.org.uk/donate/fundraise/${Number(donation) || 10}/credit-card`}>
@@ -81,7 +81,7 @@ export const Calculator = () => {
             Donate {!isNaN(donation) && donation > 0 && '£' + Number(donation)}
           </Button>
         </a>
-      </div> -->
+      </div> */}
     </div>
   )
 }
